@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: giro-da-noticia
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_STT_MODEL
+        value: whisper-large-v3-turbo
+      - key: GROQ_TEXT_MODEL
+        value: openai/gpt-oss-20b
